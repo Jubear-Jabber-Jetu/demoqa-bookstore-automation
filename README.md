@@ -1,12 +1,18 @@
 # DemoQA Book Store — Selenium UI Automation
 
 [![UI Tests](https://github.com/Jubear-Jabber-Jetu/demoqa-bookstore-automation/actions/workflows/ci.yml/badge.svg)](https://github.com/Jubear-Jabber-Jetu/demoqa-bookstore-automation/actions/workflows/ci.yml)
+[![Test Report](https://img.shields.io/badge/Test%20Report-view-2ea44f.svg)](https://jubear-jabber-jetu.github.io/demoqa-bookstore-automation/)
+[![Screenshots](https://img.shields.io/badge/Screenshots-view-blue.svg)](https://jubear-jabber-jetu.github.io/demoqa-bookstore-automation/#screenshots)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Selenium 4](https://img.shields.io/badge/selenium-4.x-43B02A.svg)](https://www.selenium.dev/)
 [![pytest](https://img.shields.io/badge/pytest-8.x-0A9EDC.svg)](https://docs.pytest.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 Production-ready UI automation framework for the [DemoQA Book Store](https://demoqa.com/books). Built with **Python**, **Selenium 4**, **pytest**, and the **Page Object Model (POM)** — designed for maintainability, explicit waits, and CI/CD integration.
+
+**Latest CI results (updated after every push to `main`):**
+- [Test Report & Screenshots](https://jubear-jabber-jetu.github.io/demoqa-bookstore-automation/)
+- [HTML Report only](https://jubear-jabber-jetu.github.io/demoqa-bookstore-automation/report.html)
 
 ---
 
@@ -111,10 +117,17 @@ Every push and pull request to `main` triggers the **UI Tests** workflow:
 1. Installs Python 3.10 and Google Chrome
 2. Runs `pytest --headless` with HTML and JUnit reporters
 3. Publishes test results to the GitHub Checks tab
-4. Uploads artifacts (retained 30 days):
-   - `html-report` — self-contained HTML report
-   - `junit-report` — JUnit XML
-   - `screenshots` — per-test screenshots
+4. Uploads artifacts (retained 30 days): `html-report`, `junit-report`, `screenshots`
+5. **Publishes a public report site to GitHub Pages** (main branch only)
+
+### Public report links (About sidebar + README)
+
+| Resource | URL |
+|----------|-----|
+| Test results home | https://jubear-jabber-jetu.github.io/demoqa-bookstore-automation/ |
+| HTML report | https://jubear-jabber-jetu.github.io/demoqa-bookstore-automation/report.html |
+
+These links appear in the repository **About → Website** field and are refreshed after each successful CI run on `main`.
 
 Download artifacts from the **Actions** tab → select a workflow run → **Artifacts**.
 

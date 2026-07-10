@@ -20,6 +20,7 @@ htmlcov/
 # Generated test artifacts (CI uploads these as artifacts)
 reports/
 screenshots/*.png
+site/
 
 # IDE / OS
 .idea/
