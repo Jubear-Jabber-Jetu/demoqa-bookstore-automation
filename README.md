@@ -17,7 +17,7 @@ Production-ready UI automation framework for the [DemoQA Book Store](https://dem
 - **Headless support** — `--headless` CLI flag for local runs and CI pipelines
 - **Automatic screenshots** — captured on every successful test; `_failed` suffix on failures
 - **HTML & JUnit reports** — generated in CI and published as downloadable artifacts
-- **GitHub Actions CI** — matrix testing on Python 3.10 and 3.12 with Chrome
+- **GitHub Actions CI** — headless tests on Python 3.10 with Chrome
 
 ## Tech Stack
 
@@ -108,13 +108,13 @@ demoqa-bookstore-automation/
 
 Every push and pull request to `main` triggers the **UI Tests** workflow:
 
-1. Installs Python (3.10 & 3.12 matrix) and Google Chrome
+1. Installs Python 3.10 and Google Chrome
 2. Runs `pytest --headless` with HTML and JUnit reporters
 3. Publishes test results to the GitHub Checks tab
 4. Uploads artifacts (retained 30 days):
-   - `html-report-py<version>` — self-contained HTML report
-   - `junit-report-py<version>` — JUnit XML
-   - `screenshots-py<version>` — per-test screenshots
+   - `html-report` — self-contained HTML report
+   - `junit-report` — JUnit XML
+   - `screenshots` — per-test screenshots
 
 Download artifacts from the **Actions** tab → select a workflow run → **Artifacts**.
 
